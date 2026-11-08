@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cinema-hero {
+    background-color: #11141d;
+    background-image:
+        linear-gradient(90deg, rgba(8, 9, 13, .98) 0%, rgba(8, 9, 13, .82) 43%, rgba(8, 9, 13, .36) 100%),
+        linear-gradient(0deg, rgba(8, 9, 13, .8) 0%, transparent 52%),
+        url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=85');
+    background-position: center, center, center 46%;
+    background-size: cover;
+}
+
+.cinema-text-gradient {
+    background: linear-gradient(110deg, #c4b5fd 0%, #818cf8 55%, #67e8f9 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.movie-rail {
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.movie-rail::-webkit-scrollbar {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
